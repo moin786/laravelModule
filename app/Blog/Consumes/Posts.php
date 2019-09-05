@@ -2,12 +2,12 @@
 namespace App\Blog\Consumes;
 
 use App\Blog\AbstractModel\AbstractConsumeModel;
-use App\Post;
+use App\Blog\Models\Post;
 
 
-class Posts extends AbstractParameterModel
+class Posts extends AbstractConsumeModel
 {
-    public function showPosts($data)
+    public function showPosts()
     {
         $posts = Post::all();
         return response()->json($posts, 200);

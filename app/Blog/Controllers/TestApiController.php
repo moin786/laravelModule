@@ -1,5 +1,5 @@
 <?php
-namespace App\grubapi\Controllers;
+namespace App\Blog\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,13 +8,13 @@ use App;
 
 class TestApiController extends Controller
 {
-    protected $parameter;
+    protected $rescource;
     /**
      * Get parameters instance from IOC container
      */
     public function __construct()
     {
-        $this->parameter = App::make('parameters', ['parameter' => config('blog.blog.post')]);
+        $this->rescource = App::make('resources', ['resource' => config('blog.blog.post')]);
     }
 
     /**
@@ -24,13 +24,10 @@ class TestApiController extends Controller
      * @return json object
      */
 
-    public function showCuisine(Request $request) {
-        $data = [
-            'city' => $request->get('city')
-        ];
-        return $this->parameter
-                    ->parameterRender()
-                    ->showParameter($data);
+    public function showPosts(Request $request) {
+        return $this->rescource
+                    ->renderResource()
+                    ->showPosts();
     }
 
     public function testView() {

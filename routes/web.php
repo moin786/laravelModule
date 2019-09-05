@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('testposts', '\App\Blog\Controllers\TestApiController@showPosts');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

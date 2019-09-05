@@ -1,14 +1,14 @@
 <?php
-namespace App\grubapi\Contracts;
+namespace App\Blog\Contracts;
 
-Interface IConsumer {
+Interface IConsume {
 
     /**
      * Show blog posts
      *
      * @return json object
      */
-    public function showBlogs();
+    public function showPosts();
 
     /**
      * Undocumented function
@@ -16,7 +16,7 @@ Interface IConsumer {
      * @param array $data
      * @return void
      */
-    public function createBlog(array $data);
+    public function createPost(array $data);
 
     /**
      * Undocumented function
@@ -24,7 +24,7 @@ Interface IConsumer {
      * @param [type] $id
      * @return void
      */
-    public function updateBlog($id);
+    public function updatePost($id);
 
     /**
      * Undocumented function
@@ -32,5 +32,5 @@ Interface IConsumer {
      * @param [type] $id
      * @return void
      */
-    public function deleteBlog($id);
+    public function deletePost($id);
 }

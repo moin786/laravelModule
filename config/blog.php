@@ -2,6 +2,6 @@
 
 return [
     'blog' => [
-        'post' => \App\blog\Consumes\Post::class
+        'post' => \App\Blog\Consumes\Posts::class
     ]
 ];

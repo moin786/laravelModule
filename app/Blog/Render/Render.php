@@ -1,7 +1,7 @@
 <?php 
 namespace App\Blog\Render;
 
-use App\grubapi\AbstractModel\AbstractComsumeModel;
+use App\Blog\AbstractModel\AbstractConsumeModel;
 
 class Render {
     
@@ -12,7 +12,7 @@ class Render {
      *
      * @param AbstractComsumeModel $parameter
      */
-    public function __construct(AbstractComsumeModel $consume) {
+    public function __construct(AbstractConsumeModel $consume) {
         $this->consume = $consume;
     }
     
@@ -21,7 +21,7 @@ class Render {
      *
      * @return AbstractParameterModel
      */
-    public function resourceRender():AbstractComsumeModel {
+    public function renderResource():AbstractConsumeModel {
         return $this->consume;
     }
 }

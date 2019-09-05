@@ -26,8 +26,8 @@ class BlogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('consumer', function($app, $consume) {
-            return new ParameterRender(new $consume['consume']);
+        $this->app->bind('resources', function($app, $consume) {
+            return new Render(new $consume['resource']);
         });
 
         
