@@ -1,0 +1,1 @@
+Hello {{name}} Iam test view file from package.
